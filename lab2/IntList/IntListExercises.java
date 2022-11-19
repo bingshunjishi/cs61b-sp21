@@ -1,5 +1,7 @@
 package IntList;
 
+import org.junit.Test;
+
 public class IntListExercises {
 
     /**
@@ -10,8 +12,9 @@ public class IntListExercises {
      */
     public static void addConstant(IntList lst, int c) {
         IntList head = lst;
+        head.first += c;
         while (head.rest != null) {
-            head.first += c;
+            head.rest.first += c;
             head = head.rest;
         }
     }
