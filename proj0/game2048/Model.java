@@ -196,7 +196,7 @@ public class Model extends Observable {
      * */
     public static boolean emptySpaceExists(Board b) {
         // TODO: Fill in this function.
-        return TileUtils.some(Objects::isNull, b);
+        return TileUtils.some(Objects::isNull, b); //
     }
 
     /**
@@ -261,6 +261,7 @@ public class Model extends Observable {
         }
     }
 
+    //Predicate接受的参数即为判断的条件 调用size和tile方法遍历每个board
     private static class TileUtils {
         public static boolean some(Predicate<Tile> tilePredicate, Board b) {
             for (int col = 0; col < b.size(); col++) {
